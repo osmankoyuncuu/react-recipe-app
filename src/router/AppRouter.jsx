@@ -2,10 +2,11 @@ import { Routes, Route } from "react-router-dom";
 import Login from "../pages/Login/Login";
 import Home from "../pages/Home/Home";
 import PrivateRouter from "./PrivateRouter";
-import { useState } from "react";
+//import { useState } from "react";
+import About from "../pages/About/About";
+import Details from "../pages/Details/Details";
 
-const AppRouter = () => {
-  const [isLogin, setIsLogin] = useState(false);
+const AppRouter = ({ isLogin, setIsLogin }) => {
   return (
     <>
       <Routes>
@@ -13,6 +14,8 @@ const AppRouter = () => {
           <Route index element={<Home />} />
         </Route>
         <Route path="/login" element={<Login setIsLogin={setIsLogin} />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/details" element={<Details />} />
       </Routes>
     </>
   );
