@@ -5,6 +5,10 @@ const StyleForm = styled.div`
   flex-direction: column;
   width: 15rem;
   margin-top: 1rem;
+  @media (max-width: ${({ theme }) => theme.responsive.small}) {
+    width: 10rem;
+      margin-top: 0;
+  
 `;
 
 export const Input = styled.input`
@@ -21,7 +25,7 @@ export const Button = styled.button`
   height: 2rem;
   border-radius: 0.5rem;
   border: none;
-  background-color: #411d41;
+  background-color: ${({ theme }) => theme.color.first};
   font-size: 1.1rem;
   color: whitesmoke;
   margin-top: 0.5rem;

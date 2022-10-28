@@ -6,13 +6,13 @@ import StyleLogin, {
 //import { useState } from "react";
 import Form from "../../component/Form";
 
-const Login = () => {
+const Login = ({ setIsLogin }) => {
   return (
     <StyleLogin>
       <Circle>
         <LoginIcon src="./assets/meal2.svg" alt="" />
         <LoginHeader>Welcome</LoginHeader>
-        <Form />
+        <Form setIsLogin={setIsLogin} />
       </Circle>
     </StyleLogin>
   );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyleCard = styled.div`
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 `;
 
 export const CardBox = styled.div`

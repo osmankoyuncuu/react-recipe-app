@@ -16,7 +16,7 @@ const About = () => {
           About Full-Stack Developer <HeaderName>Osman</HeaderName>
         </AboutHeader>
         <AboutContent>
-          <h3>I'm Osman</h3>
+          <HeaderName>I'm Osman</HeaderName>
           <p>I'm currently learning Full-Stack Development Languages.</p>
           <p>
             I've already known JS, ReactJS, NodeJS, Python, Django, MongoDB,

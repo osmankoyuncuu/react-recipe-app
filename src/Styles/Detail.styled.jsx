@@ -25,17 +25,17 @@ export const DetailsHeader = styled.div`
 
 export const DetailsBox = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 20rem);
-  grid-template-rows: 20rem;
+  grid-template-columns: repeat(3, 28rem);
+  grid-template-rows: 24rem;
   gap: 1rem;
   padding: 1rem;
-  margin: 2rem;
+  margin: 1rem;
   background-color: ${({ theme }) => theme.color.third};
   border: 2px solid ${({ theme }) => theme.color.third};
   border-radius: 2rem;
 `;
 export const DetailsImg = styled.img`
-  width: 320px;
+  width: 390px;
   border-radius: 0.5rem;
 `;
 
@@ -44,8 +44,18 @@ export const Nutrients = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 0.7rem;
-  margin: 0.5rem;
+  margin: auto;
   letter-spacing: 1px;
 `;
 
+export const Ingredient = styled.div`
+  /*margin: 3rem;*/
+  width: 100%;
+  margin: auto;
+`;
+
+export const IngredientLi = styled.li`
+  margin-top: 0.5rem;
+  list-style-type: circle;
+`;
 export default StyleDetails;

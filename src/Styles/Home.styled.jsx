@@ -3,8 +3,7 @@ import styled from "styled-components";
 const StyleHome = styled.div`
   width: 100vw;
   height: ${({ card }) => (card.length === 0 ? "90vh" : "100%")};
-  background-color: ${({ theme, card }) =>
-    card.length === 0 ? theme.color.third : theme.color.fourth};
+  background-color: ${({ theme }) => theme.color.third};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,6 +17,9 @@ export const SearhBox = styled.div`
   display: flex;
   gap: 1rem;
   height: 2rem;
+  @media (max-width: ${({ theme }) => theme.responsive.small}) {
+    flex-direction: column;
+  }
 `;
 
 export const Input = styled.input`
@@ -59,6 +61,13 @@ export const Button = styled.button`
 export const HomeIcon = styled.img`
   width: 500px;
   margin-top: 3rem;
+  @media (max-width: ${({ theme }) => theme.responsive.medium}) {
+    width: 400px;
+  }
+  @media (max-width: ${({ theme }) => theme.responsive.small}) {
+    margin-top: 5rem;
+    width: 300px;
+  }
 `;
 
 export const CardContainer = styled.div`
@@ -66,6 +75,10 @@ export const CardContainer = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  margin: 2rem 1rem;
+  @media (max-width: ${({ theme }) => theme.responsive.small}) {
+    margin: 5rem 1rem 2rem;
+  }
 `;
 
 export default StyleHome;

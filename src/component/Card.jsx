@@ -6,11 +6,16 @@ import StyleCard, {
 } from "../Styles/Card.styled";
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ item }) => {
+const Card = ({ item, isLoading, setIsLoading }) => {
   const navigate = useNavigate();
   const {
     recipe: { label, image },
   } = item;
+
+  const handleDetails = () => {
+    setIsLoading(true);
+    return navigate(`/details`, { state: item });
+  };
 
   return (
     <StyleCard>
@@ -20,9 +25,7 @@ const Card = ({ item }) => {
         </CardHeader>
         <div>
           <CardImg src={image} alt="" />
-          <Button onClick={() => navigate(`/details`, { state: item })}>
-            View More
-          </Button>
+          <Button onClick={() => handleDetails()}>View More</Button>
         </div>
       </CardBox>
     </StyleCard>

@@ -11,14 +11,28 @@ const style = {
     third: "#FFCACA",
     fourth: "#FFECEF",
   },
+  responsive: {
+    small: "576px",
+    medium: "768px",
+    large: "992px",
+    xlarge: "1200px",
+    xxlarge: "1400px",
+  },
 };
 const App = () => {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
+  const [card, setCard] = useState([]);
+
   return (
     <ThemeProvider theme={style}>
       <GlobalStyles />
-      {isLogin && <Navbar />}
-      <AppRouter isLogin={isLogin} setIsLogin={setIsLogin} />
+      {isLogin && <Navbar setIsLogin={setIsLogin} setCard={setCard} />}
+      <AppRouter
+        isLogin={isLogin}
+        setIsLogin={setIsLogin}
+        card={card}
+        setCard={setCard}
+      />
     </ThemeProvider>
   );
 };
