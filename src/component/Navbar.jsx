@@ -1,14 +1,25 @@
-import StyleNavbar, { Header, NavbarLink, Ul } from "../Styles/Navbar.styled";
+import StyleNavbar, {
+  A,
+  Header,
+  NavbarLink,
+  Ul,
+} from "../Styles/Navbar.styled";
 
-const Navbar = () => {
+const Navbar = ({ setIsLogin, setCard }) => {
   return (
     <StyleNavbar>
-      <Header>Osman</Header>
+      <Header>Recipe</Header>
       <Ul>
-        <NavbarLink to="/">Home</NavbarLink>
+        <NavbarLink to="/" onClick={() => setCard([])}>
+          Home
+        </NavbarLink>
         <NavbarLink to="/about">About</NavbarLink>
-        <NavbarLink to="/github">Github</NavbarLink>
-        <NavbarLink to="/login">Logout</NavbarLink>
+        <A href="https://github.com/osmankoyuncuu" target="_blank">
+          Github
+        </A>
+        <NavbarLink to="/login" onClick={() => setIsLogin(false)}>
+          Logout
+        </NavbarLink>
       </Ul>
     </StyleNavbar>
   );
