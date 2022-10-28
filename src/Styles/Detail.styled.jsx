@@ -33,6 +33,7 @@ export const DetailsBox = styled.div`
   background-color: ${({ theme }) => theme.color.third};
   border: 2px solid ${({ theme }) => theme.color.third};
   border-radius: 2rem;
+  overflow: auto;
 `;
 export const DetailsImg = styled.img`
   width: 390px;
