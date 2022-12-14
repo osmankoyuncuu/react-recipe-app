@@ -62,4 +62,4 @@ Project aims to create a recipe app.
 
 ## Overview
 
-I mastered HTML, CSS , JS, React and Styled Component features in this project. You can see the visual representation of the website above.
+I mastered HTML, CSS , JS, React, Styled Component and axios features in this project. You can see the visual representation of the website above.
